@@ -4,6 +4,7 @@ using Demo_EFC_01.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo_EFC_01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230606083731_Fix_Zaza_Mail")]
+    partial class Fix_Zaza_Mail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,7 +129,7 @@ namespace Demo_EFC_01.Migrations
                         },
                         new
                         {
-                            StudentId = 4,
+                            StudentId = 3,
                             BirthDate = new DateTime(1981, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FirstName = "Miss",
                             Gender = 2,

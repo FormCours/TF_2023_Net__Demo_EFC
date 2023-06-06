@@ -4,6 +4,7 @@ using Demo_EFC_01.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo_EFC_01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230606083220_Add_Student")]
+    partial class Add_Student
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,33 +109,12 @@ namespace Demo_EFC_01.Migrations
                         {
                             StudentId = 1,
                             BirthDate = new DateTime(1995, 5, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "z.vanderquack@gmail.be",
+                            Email = "z.vanderquack@gmail.com",
                             FirstName = "Zaza",
                             Gender = 0,
                             IsValidate = true,
                             LastName = "Vanderquack",
                             RegNat = 95053012546L
-                        },
-                        new
-                        {
-                            StudentId = 2,
-                            BirthDate = new DateTime(1960, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "b.picsou@gmail.com",
-                            FirstName = "Balthazar",
-                            Gender = 1,
-                            IsValidate = true,
-                            LastName = "Picsou",
-                            RegNat = 60060112345L
-                        },
-                        new
-                        {
-                            StudentId = 4,
-                            BirthDate = new DateTime(1981, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FirstName = "Miss",
-                            Gender = 2,
-                            IsValidate = false,
-                            LastName = "Tick",
-                            RegNat = 81030398765L
                         });
                 });
 

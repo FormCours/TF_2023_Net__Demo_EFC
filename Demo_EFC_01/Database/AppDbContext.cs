@@ -69,6 +69,41 @@ namespace Demo_EFC_01.Database
             modelBuilder.Entity<Student>()
                 .Property(s => s.IsValidate)
                 .HasColumnName("Validate");
+
+            modelBuilder.Entity<Student>()
+                .HasData(new Student
+                {
+                    StudentId = 1,
+                    FirstName = "Zaza",
+                    LastName = "Vanderquack",
+                    BirthDate = new DateTime(1995, 5, 30),
+                    Email = "z.vanderquack@gmail.be",
+                    Gender = StudentGender.F,
+                    IsValidate = true,
+                    RegNat = 95053012546
+                },
+                new Student
+                {
+                    StudentId = 2,
+                    FirstName = "Balthazar",
+                    LastName = "Picsou",
+                    BirthDate = new DateTime(1960, 9, 1),
+                    Email = "b.picsou@gmail.com",
+                    Gender = StudentGender.M,
+                    IsValidate = true,
+                    RegNat = 60060112345
+                },
+                new Student
+                {
+                    StudentId = 4,
+                    FirstName = "Miss",
+                    LastName = "Tick",
+                    BirthDate = new DateTime(1981, 3, 3),
+                    Gender = StudentGender.X,
+                    IsValidate = false,
+                    RegNat = 81030398765
+                });
+
             #endregion
 
             #region Product

@@ -15,6 +15,6 @@
         public DateTime BirthDate { get; set; }
         public bool IsValidate { get; set; }
         public StudentGender Gender { get; set; }
-        public int RegNat { get; set; }
+        public long RegNat { get; set; }
     }
 }
